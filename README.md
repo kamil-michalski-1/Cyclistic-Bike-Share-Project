@@ -1,4 +1,4 @@
-<h1><span style="color:blue">Data Analysis Capstone Project - Cyclistic Bike-Share</span></h1>
+<h1>Data Analysis Capstone Project - Cyclistic Bike-Share</h1>
 
 <h2>Intro</h2>
 Hi, my name is Kamil Michalski. I'm passionate about data and believe that it can change the world for better, giving us deeper understanding of issues we face in business and in life, and guiding us towards more effective solutions. I'm very keen to further expand my knowledge and skills in the field of data.<br>
