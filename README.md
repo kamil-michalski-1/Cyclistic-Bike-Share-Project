@@ -8,13 +8,11 @@ Hi, my name is Kamil Michalski. I'm passionate about data and believe that it ca
 
 <h2>Navigation</h2>
 Below you'll find a table of contents with links to specific README files documenting data validation, cleaning & transformation, and analysis procedures conducted as part of the project.<br>
-<br><ul>
-<li>[Initial data validation](README.md)</li>
-<li>[Data cleaning & transformation](README.md)</li>
-<li>[Data analysis](README.md)</li>
-</ul>
-
+<br>
 [Initial data validation](README.md)
+[Data cleaning & transformation](README.md)
+[Data analysis](README.md)
+
 <!---
 kamil-michalski-1/kamil-michalski-1 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
