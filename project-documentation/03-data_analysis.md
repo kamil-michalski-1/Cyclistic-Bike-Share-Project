@@ -1,19 +1,40 @@
 <h1>Tools</h1>
 Posit Cloud / R Studio with justification
-what packages installed and loaded - tidyverse, bigrquery for API with Big Query projects
+what packages installed and loaded - tidyverse, bigrquery for API with Big Query projects, dbplyr, skimr, DBI, odbc
 
 <h1>Data upload</h1>
-bigrquery package, API through code
+establishing connection
 ```
-> bq_auth()
+con <- dbConnect(
+  bigquery(),
+  project = "cyclistic-analysis-oct-2023",
+  dataset = "trips_2022",
+  billing = "cyclistic-analysis-oct-2023"
+)
 ```
 
+viewing tables in connection
 ```
-projectid<-"cyclistic-analysis-oct-2023"
-sql<-"SELECT * FROM cyclistic-analysis-oct-2023.trips_2022.cyclistic_2022_dataset_clean"
-df <- bq_project_query(projectid,sql) %>% bq_table_download
+dbListTables(con)
 ```
 
+viewing fields in the table
+```
+dbListFields(con, "cyclistic_2022_dataset_clean")
+```
+
+creating a table in R studio
+```
+trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
+```
+
+error
+
+```
+Error in strsplit(name, ".", fixed = TRUE) : non-character argument
+```
+
+resolved by 
 <h1>Analysis</h1>
 
 <h1>Visualisations</h1>
