@@ -28,13 +28,12 @@ creating a table in R studio
 trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
 ```
 
-error
+performance issue, although data shown correctly in head() and view(), number of rows not shown in str(), glimpse(),
+skim() wouldn't load, possibly due to size of the dataset comprising annual data (5.6m records)
 
-```
-Error in strsplit(name, ".", fixed = TRUE) : non-character argument
-```
+resolved by
 
-resolved by 
+
 <h1>Analysis</h1>
 
 <h1>Visualisations</h1>
