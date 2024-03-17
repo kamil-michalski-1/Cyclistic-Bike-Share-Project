@@ -44,8 +44,7 @@ As next step, a new table was created in Posit Cloud Studio based on connection 
 trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
 ```
 
-performance issue, although data shown correctly in head() and view(), number of rows not shown in str(), glimpse(),
-skim() wouldn't load, possibly due to size of the dataset comprising annual data (5.6m records), possibly due to hardware limitations
+To gain full comfort over the correctness of newly created table, functions such as head(), view(), str(), glimpse(), and skim_without_charts() were applied to the "trips_2022_clean" dataset. However, despite correct display of the number and name of columns, the functions did not show the total number of rows. This was likely due to hardware and/or RAM limitations as the dataset comprised a significant number of records (over 5.6 million rows).
 
 completeness check in R studio done by querying subsets of the table, at the same time getting initial insights - number of unique rides per membership vs. casual
 
@@ -233,5 +232,5 @@ output
 
 
 <h1>Conclusion</h1>
-
+Cover further areas to upskill onhandling very large datasets in R, e.g. through splitting them into more manageable chunks. Also, from the business perspective, it might be beneficial to filter as much data as possible and query subsets of the full dataset for better performance.
 
