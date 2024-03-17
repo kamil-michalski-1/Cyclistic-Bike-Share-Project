@@ -171,6 +171,36 @@ output - insight is that casuals used docked bike, whereas members don't
 
 Certain insights better visible in graphical form, decided to show analyse differences in monthly distribution of rides between members and casual, and show them in a time series chart
 
+First a new data frame was created from monthly statistics on number of rides in members and casual
+
+a. members
+
+```
+members_trips_monthly <- trips_2022_clean %>% 
+     mutate(
+     month = month(started_at)
+     ) %>% 
+     group_by(month) %>%
+     filter(member_casual == "member") %>%
+     summarise(no_of_rides = n_distinct(ride_id))
+```
+
+b. casual
+
+```
+casual_trips_monthly <- trips_2022_clean %>% 
+     mutate(
+     month = month(started_at)
+     ) %>% 
+     group_by(month) %>%
+     filter(member_casual == "casual") %>%
+     summarise(no_of_rides = n_distinct(ride_id))
+```
+
+Based on these data frames visualisations were developed using the ggplot2 package.
+
+
+
 
 
 <h1>Conclusion</h1>
