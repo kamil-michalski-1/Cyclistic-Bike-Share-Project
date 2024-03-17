@@ -39,7 +39,7 @@ completeness check in R studio done by querying subsets of the table, at the sam
 ```
 > trips_2022_clean%>%
    group_by(member_casual) %>%
-   summarize(no_of_rides <- n_distinct(ride_id))
+   summarize(no_of_rides = n_distinct(ride_id))
 ```
 
 Output - total number of unique ride IDs equals the total number of rows in Big Query dataset (i.e. 5,667,186), therefore connection from Google Cloud to Posit Cloud assessed as successful. Also initial insight - majority of rides (59%) are members.
@@ -61,7 +61,7 @@ a. member
 trips_2022_clean %>%
      group_by(day_of_week) %>%
      filter(member_casual=="member") %>%
-     summarize(no_of_rides <- n_distinct(ride_id))
+     summarize(no_of_rides = n_distinct(ride_id))
 ```
 
 output
@@ -82,7 +82,7 @@ b. casual
 trips_2022_clean %>%
      group_by(day_of_week) %>%
      filter(member_casual=="casual") %>%
-     summarize(no_of_rides <- n_distinct(ride_id))
+     summarize(no_of_rides = n_distinct(ride_id))
 ```
 
 output
@@ -105,7 +105,7 @@ a. member
 trips_2022_clean %>%
      group_by(rideable_type) %>%
      filter(member_casual=="member") %>%
-     summarize(avg_ride_length <- mean(ride_length))
+     summarize(avg_ride_length = mean(ride_length))
 ```
 
 output
@@ -121,7 +121,7 @@ b. casual
 trips_2022_clean %>%
       group_by(rideable_type) %>%
       filter(member_casual=="casual") %>%
-      summarize(avg_ride_length <- mean(ride_length))
+      summarize(avg_ride_length = mean(ride_length))
 ```
 
 output - trips on docked bikes are much longer
@@ -140,7 +140,7 @@ a. member
 trips_2022_clean %>%
      group_by(rideable_type) %>%
      filter(member_casual=="member") %>%
-     summarise(no_of_rides <- n_distinct(ride_id))
+     summarise(no_of_rides = n_distinct(ride_id))
 ```
 
 output
@@ -156,7 +156,7 @@ b. casual
 trips_2022_clean %>%
       group_by(rideable_type) %>%
       filter(member_casual=="casual") %>%
-      summarise(no_of_rides <- n_distinct(ride_id))
+      summarise(no_of_rides = n_distinct(ride_id))
 ```
 
 output - insight is that casuals used docked bike, whereas members don't
