@@ -5,7 +5,7 @@ Hi, my name is Kamil Michalski. I'm passionate about data and believe that it ca
 <br></be>This location documents my work on a capstone project at the end of my journey with Google Data Analyst Certificate. The project is a case study provided in the programme and concerns a data analysis for a bike-share company Cyclistic. While Cyclistic is a fictional company, the analysis is based on a real dataset made available to the public by Lyft Bikes and Scooters, LLC operating Chicago’s Divvy bike-sharing service.<br>
 <br>I hope the attached files clearly present the scope of work done and demonstrate my skills & approach. If you have any questions or comments, you can reach me via email on <a href="mailto:kammich4@gmail.com">kammich4@gmail.com</a>.<br><br>
 
-You can also see further details about me, incl. experience, education, and career history on my [LinkedIn profile](https://www.linkedin.com/in/k-michalski). <br>
+You can also find further details about me, incl. experience, education, and career history on my [LinkedIn profile](https://www.linkedin.com/in/k-michalski). <br>
 
 <br>Thanks!
 
