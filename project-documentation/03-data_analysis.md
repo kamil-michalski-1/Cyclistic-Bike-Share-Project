@@ -105,12 +105,12 @@ a. member
 trips_2022_clean %>%
      group_by(rideable_type) %>%
      filter(member_casual=="member") %>%
-     summarize(no_of_rides = mean(ride_length))
+     summarize(avg_ride_length = mean(ride_length))
 ```
 
 output
 
-|rideable_type|no_of_rides|   
+|rideable_type|avg_ride_length|   
 |-------------|-----------|
 |electric_bike|0-0 0 0:11:27.831325|
 |classic_bike|0-0 0 0:13:54.705167|
@@ -121,12 +121,12 @@ b. casual
 trips_2022_clean %>%
       group_by(rideable_type) %>%
       filter(member_casual=="casual") %>%
-      summarize(no_of_rides = mean(ride_length))
+      summarize(avg_ride_length = mean(ride_length))
 ```
 
 output - trips on docked bikes are much longer
 
-|rideable_type|no_of_rides|     
+|rideable_type|avg_ride_length|     
 |-------------|-----------|
 |electric_bike|0-0 0 0:16:10.564482|
 |docked_bike|0-0 0 2:2:42.941888|
