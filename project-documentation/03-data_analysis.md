@@ -1,11 +1,12 @@
 <h1>Tools</h1>
-For the purpose of further analysis of the bike hire dataset, I decided to use Posit Cloud Studio (formerly known as R Studio) which relies on the programming language R. The reasons for this decision include the following:<br>
+For the purpose of further analysis of the bike hire dataset, I decided to use Posit Cloud Studio (formerly known as R Studio) which relies on the programming language R.<br>
+The reasons for the decision to use R include the following:<br>
 <li>R enforces a structured approach to the analysis, as each step needs to be appropriately coded in the programming language,</li>
 <li>Analysis is thoroughly documented and easily reproducible, analysis steps and code can be reviewed by others,</li>
 <li>R includes highly specialised packages for data analysis that enable all types of transformations to datasets,</li>
 <li>As opposed to Excel, R can easily and quickly process large amounts of data,</li>
 <li>As opposed to SQL databases (e.g. Big Query) R has capabilities to produce varied and advanced visualisations,</li>
-<li>Through usage of dedicated packages, Posit Cloud Studio can connect to Big Query and access data stored on Google Big Query Cloud through API.<li/><br><br>
+<li>Through usage of dedicated packages, Posit Cloud Studio can connect to Big Query and access data stored on Google Big Query Cloud through API.<br>
 
 Key R packages installed and loaded during the analysis include: tidyverse (incl. dplyr and ggplot2), bigrquery, DBI and odbc.
 
