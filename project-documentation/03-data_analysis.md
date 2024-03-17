@@ -8,7 +8,7 @@ The reasons for the decision to use R include the following:<br>
 <li>As opposed to SQL databases (e.g. Big Query) R has capabilities to produce varied and advanced visualisations,</li>
 <li>Through usage of dedicated packages, Posit Cloud Studio can connect to Big Query and access data stored on Google Big Query Cloud through API.<br>
 
-Key R packages installed and loaded during the analysis include:
+Key R packages installed and loaded during the analysis include:<br>
 <li>tidyverse (incl. dplyr, ggplot2, tidyr and forcats),</li>
 <li>bigrquery,</li>
 <li>DBI,</li>
