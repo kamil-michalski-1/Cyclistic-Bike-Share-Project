@@ -1,6 +1,6 @@
 <h1>Data source</h1>
-Data was downloaded from the link below. The repository covered Chicago's Divvy bike-sharing service trip records since January 2013 until today (download date - 15 October 2023). For the purpose of our analysis, full data on 2022 trips were selected as a representative period (to account for seasonal fluctuations).<br>
-
+Data was downloaded from the link below. The repository covered Chicago's Divvy bike-sharing service trip records since January 2013 until today (download date - 15 October 2023). For the purpose of my analysis, full data on 2022 trips were selected as a representative period (to account for seasonal fluctuations).<br>
+<br>
 [https://divvy-tripdata.s3.amazonaws.com/index.html](https://divvy-tripdata.s3.amazonaws.com/index.html)
 
 <h1>Data upload</h1>
