@@ -10,12 +10,13 @@ The reasons for the decision to use R include the following:<br>
 
 Key R packages installed and loaded during the analysis include:<br>
 <li>tidyverse (incl. dplyr, ggplot2, tidyr and forcats),</li>
+<li>skimr,</li>
 <li>bigrquery,</li>
 <li>DBI,</li>
 <li>odbc.</li>
 
 <h1>Data upload</h1>
-establishing connection
+As the  first step in Posit Cloud Studio, a connection was established with the Big Query Cloud where the dataset was pre-validated and cleaned in previous stages. For this purpose, dedicated functions covered in packages DBI and bigrquery were used as demonstrated in the code below.
 
 ```
 con <- dbConnect(
@@ -26,18 +27,18 @@ con <- dbConnect(
 )
 ```
 
-viewing tables in connection
+After establishing the connection, it became possible to view tables connected from Big Query Cloud to Posit Cloud Studio.
 ```
 dbListTables(con)
 ```
 
-viewing fields in the table
+Further, to validate the corectness of the connection, a listing of fields in the required table from Big Query Cloud was displayed in Posit Cloud Studio, based on the function below.
 
 ```
 dbListFields(con, "cyclistic_2022_dataset_clean")
 ```
 
-creating a table in Posit Cloud studio
+As next step, a new table was created in Posit Cloud Studio based on connection with the cleaned dataset in Big Query Cloud.
 
 ```
 trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
