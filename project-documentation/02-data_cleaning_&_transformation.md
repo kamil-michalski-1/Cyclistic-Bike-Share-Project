@@ -38,7 +38,7 @@ Further procedures were conducted to confirm the integrity of data and better un
 |:-:|:-:|:-:|
 |1|0-0 0 689:47:15|0-0 0 -172:33:21|
 
-<li>The dataset was queried to identify and review all records with negative ride times - as per code below. This revealed that only 100 records had ride times with a negative value. No pattern was detected for entries with negative ride times, e.g. against days of the week, rideable types or user types (member vs. casual).</li>
+<li>The dataset was queried to identify and review all records with negative ride times - as per code below. This revealed that only 100 records had ride times with a negative value. No pattern was detected for entries with negative ride times, e.g. against days of the week, rideable types, or user types (member vs. casual).</li>
 
 ```sql
   SELECT ride_id, rideable_type, started_at,ended_at, member_casual,
@@ -90,7 +90,7 @@ Further procedures were conducted to confirm the integrity of data and better un
 |6|Friday|6|
 |7|Wednesday|2|
 
-<li>In addition to above checks, records with ride time of 0 were reviewed. Based on query below, it was identified that there are 431 such records. Checks similar to the previous point showed no correlation of 0 ride times with particular rideable types, days of the week or user types (member vs. casual).</li>
+<li>In addition to above checks, records with ride time of 0 were reviewed. Based on query below, it was identified that there are 431 such records. Checks similar to the previous point showed no correlation of 0 ride times with particular rideable types, days of the week, or user types (member vs. casual).</li>
 
 ```sql
   SELECT ride_id, rideable_type, started_at,ended_at, member_casual,
