@@ -148,7 +148,7 @@ Further procedures were conducted to confirm the integrity of data and better un
 Based on data initial data validation and data cleaning procedures described in previous steps a final dataset for analysis was prepared. The following data transformations were applied:
 <li>Calculated column with ride length was added,</li>
 <li>Calculated column with day of week for trip start was added,</li>
-<li>Columns with start stations, end stations, and geodata (longitute and latitude) were not included in the final table for analysis due to data integrity issues.</li>
+<li>Columns with start stations, end stations, and geodata (longitute and latitude) were not included in the final table for analysis due to data integrity issues,</li>
 <li>Records with ride times below or equal to zero were excluded from the final table for analysis.</li>
 <br>
 All of the transformations were reflected by applying the code below. Final cleaned & transformed dataset was saved as a Big Query table and named "cyclistic_2022_dataset_clean".
