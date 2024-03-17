@@ -206,7 +206,8 @@ ggplot(data = members_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + ge
 ```
 
 output
-![2022 monthly rides in members](https://b87e3f9cd3944c1a811a1bca3d13c3ea.app.posit.cloud/file_show?path=%2Fcloud%2Fproject%2Fmembers_monthly_rides.png)
+![image](https://github.com/kamil-michalski-1/Cyclistic-Bike-Share-Project/assets/147998053/7e467898-2884-4824-bb05-a5cd9b82371a)
+
 
 b. casual
 
@@ -215,7 +216,8 @@ ggplot(data = casual_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + geo
 ```
 
 output
-![2022 monthly rides in casual users](https://b87e3f9cd3944c1a811a1bca3d13c3ea.app.posit.cloud/file_show?path=%2Fcloud%2Fproject%2Fcasual_trips_monthly.png)
+![image](https://github.com/kamil-michalski-1/Cyclistic-Bike-Share-Project/assets/147998053/bb677e29-4ae2-46ba-bdd0-c5066ddb599d)
+
 
 <h1>Conclusion</h1>
 
