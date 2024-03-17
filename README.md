@@ -7,7 +7,7 @@ Hi, my name is Kamil Michalski. I'm passionate about data and believe that it ca
 <br>Thanks!
 
 <h2>Navigation</h2>
-Below you'll find a table of contents with links to specific README files documenting data validation, cleaning & transformation, and analysis procedures conducted as part of the project.<br>
+Below you'll find a table of contents with links to specific README files documenting data validation, cleaning & transformation, and analysis procedures conducted as part of the project. The final section includes results of the analysis, presented in a user-friendly way and appropriate for discussion with various business stakeholders.<br>
 <br>
 
 + [Initial data validation](project-documentation/01-initial_data_validation.md)
