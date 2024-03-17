@@ -199,9 +199,23 @@ casual_trips_monthly <- trips_2022_clean %>%
 
 Based on these data frames visualisations were developed using the ggplot2 package.
 
+a. members
 
+```
+ggplot(data = members_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + geom_col(fill="darkblue")+scale_y_continuous(labels = scales::comma_format(), breaks = seq(0, 600000, 100000)) + scale_x_continuous(breaks = seq(1,12,1))
+```
 
+output
+![2022 monthly rides in members](https://b87e3f9cd3944c1a811a1bca3d13c3ea.app.posit.cloud/file_show?path=%2Fcloud%2Fproject%2Fmembers_monthly_rides.png)
 
+b. casual
+
+```
+ggplot(data = casual_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + geom_col(fill="orange")+scale_y_continuous(labels = scales::comma_format(), breaks = seq(0, 600000, 100000)) + scale_x_continuous(breaks = seq(1,12,1))
+```
+
+output
+![2022 monthly rides in casual users](https://b87e3f9cd3944c1a811a1bca3d13c3ea.app.posit.cloud/file_show?path=%2Fcloud%2Fproject%2Fcasual_trips_monthly.png)
 
 <h1>Conclusion</h1>
 
