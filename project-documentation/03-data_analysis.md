@@ -169,4 +169,10 @@ output - insight is that casuals used docked bike, whereas members don't
 
 <h1>Visualisations</h1>
 
+Certain insights better visible in graphical form, decided to show analyse differences in monthly distribution of rides between members and casual, and show them in a time series chart
+
+
+
 <h1>Conclusion</h1>
+
+
