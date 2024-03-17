@@ -13,6 +13,7 @@ Below you'll find a table of contents with links to specific README files docume
 + [Initial data validation](project-documentation/01-initial_data_validation.md)
 + [Data cleaning & transformation](project-documentation/02-data_cleaning_&_transformation.md)
 + [Data analysis](project-documentation/03-data_analysis.md)
++ [Presentation](project-documentation/04-presentation.md)
 
 <!---
 kamil-michalski-1/kamil-michalski-1 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
