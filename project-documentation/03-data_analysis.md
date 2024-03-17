@@ -1,5 +1,5 @@
 <h1>Tools</h1>
-For the purpose of further analysis of the bike hire dataset, I decided to use Posit Cloud Studio (formerly known as R Studio) which relies on the programming language R.<br>
+For the purpose of further analysis of the bike hire dataset, I decided to use Posit Cloud Studio (formerly known as R Studio) which relies on the programming language R.<br><br>
 The reasons for the decision to use R include the following:<br>
 <li>R enforces a structured approach to the analysis, as each step needs to be appropriately coded in the programming language,</li>
 <li>Analysis is thoroughly documented and easily reproducible, analysis steps and code can be reviewed by others,</li>
