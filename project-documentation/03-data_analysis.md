@@ -46,7 +46,7 @@ trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
 
 To gain full comfort over the correctness of the newly created table, functions such as head(), view(), str(), glimpse(), and skim_without_charts() were applied to the "trips_2022_clean" dataset. However, despite correct display of the number and name of columns, the functions did not show the total number of rows. This was likely due to hardware and/or RAM limitations as the dataset comprised a significant number of records (over 5.6 million rows).
 
-Completeness check in R studio was performed by querying subsets of the table, which at the same time revealed initial insights (e.g. number of unique rides per membership vs. casual).
+Completeness check in R studio was performed by querying subsets of the table, which at the same time revealed initial insights (e.g. number of unique rides for members vs. casual users).
 
 ```
 > trips_2022_clean%>%
