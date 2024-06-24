@@ -238,4 +238,5 @@ The output of this code is visible below.
 <h1>Conclusion</h1>
 The analysis steps documented above revealed focus areas for further development of my data analytics skills. The key area is how to handle very large datasets in R, e.g. through splitting them into more manageable chunks, applying meaningful filters, and querying subsets of the full dataset for better performance.
 
+
 Full business significance of the discovered insights and recomendations are covered in the project presentation.
