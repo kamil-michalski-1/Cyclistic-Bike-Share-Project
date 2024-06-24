@@ -220,6 +220,7 @@ ggplot(data = members_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + ge
 ```
 
 The output of this code is visible below.
+
 ![image](https://github.com/kamil-michalski-1/Cyclistic-Bike-Share-Project/assets/147998053/7e467898-2884-4824-bb05-a5cd9b82371a)
 
 
@@ -230,6 +231,7 @@ ggplot(data = casual_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + geo
 ```
 
 The output of this code is visible below.
+
 ![image](https://github.com/kamil-michalski-1/Cyclistic-Bike-Share-Project/assets/147998053/bb677e29-4ae2-46ba-bdd0-c5066ddb599d)
 
 
