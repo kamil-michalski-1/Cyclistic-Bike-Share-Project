@@ -199,7 +199,7 @@ members_trips_monthly <- trips_2022_clean %>%
      summarise(no_of_rides = n_distinct(ride_id))
 ```
 
-b. casual
+b. Casual
 
 ```
 casual_trips_monthly <- trips_2022_clean %>% 
