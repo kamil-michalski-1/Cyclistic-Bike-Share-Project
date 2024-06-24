@@ -68,7 +68,7 @@ As the output of these checks, it was confirmed that the total number of unique 
 Data analysis comprised several procedures aimed at identifying patterns in user behaviour. All the procedures and their results are documented below.
 
 <li>Number of rides per day of week by member vs. casual</li>
-
+<br><br>
 a. Member
 
 ```
@@ -112,7 +112,7 @@ Conversely, the analysis as per this piece of code above showed the number of ri
 |Wednesday|274339|
 
 <li>Average length of rides by member vs. casual</li>
-
+<br><br>
 a. Member
 
 ```
@@ -147,7 +147,7 @@ As per this analysis step, the average length of ride for each rideable type was
 |classic_bike|0-0 0 0:28:45.184446|
 
 <li>Rideable type by member vs. casual</li>
-
+<br><br>
 a. Member
 
 ```
