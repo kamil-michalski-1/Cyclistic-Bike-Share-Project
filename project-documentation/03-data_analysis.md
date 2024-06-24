@@ -46,7 +46,7 @@ trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
 
 To gain full comfort over the correctness of newly created table, functions such as head(), view(), str(), glimpse(), and skim_without_charts() were applied to the "trips_2022_clean" dataset. However, despite correct display of the number and name of columns, the functions did not show the total number of rows. This was likely due to hardware and/or RAM limitations as the dataset comprised a significant number of records (over 5.6 million rows).
 
-completeness check in R studio done by querying subsets of the table, at the same time getting initial insights - number of unique rides per membership vs. casual
+Completeness check in R studio was performed by querying subsets of the table, which at the same time revealed initial insights (e.g. number of unique rides per membership vs. casual).
 
 ```
 > trips_2022_clean%>%
@@ -54,7 +54,7 @@ completeness check in R studio done by querying subsets of the table, at the sam
    summarize(no_of_rides = n_distinct(ride_id))
 ```
 
-Output - total number of unique ride IDs equals the total number of rows in Big Query dataset (i.e. 5,667,186), therefore connection from Google Cloud to Posit Cloud assessed as successful. Also initial insight - majority of rides (59%) are members.
+As the output of these checks, it was confirmed that the total number of unique ride IDs is equal to the total number of rows in Big Query dataset (i.e. 5,667,186). Based on this, the connection from Google Cloud to Posit Cloud was assessed as successful. Initial insight discovered during the check was that the majority of rides (59%) are members.
 
 |member_casual|no_of_rides|
 |-------------|-----------|
@@ -65,9 +65,11 @@ Output - total number of unique ride IDs equals the total number of rows in Big 
 
 <h1>Analysis</h1>
 
-1. no. of rides per day of week by member vs. casual
+Data analysis comprised several procedures aimed at identifying patterns in user behaviour. All the procedures and their results are documented below.
 
-a. member
+1. Number of rides per day of week by member vs. casual
+
+a. Member
 
 ```
 trips_2022_clean %>%
@@ -76,7 +78,7 @@ trips_2022_clean %>%
      summarize(no_of_rides = n_distinct(ride_id))
 ```
 
-output
+The analysis as per the code above showed the number of rides by members on particular days of the week.
 
 |day_of_week|no_of_rides|
 |-----------|-----------|
@@ -88,7 +90,7 @@ output
 |Tuesday|518584|
 |Saturday|443246|
 
-b. casual
+b. Casual
 
 ```
 trips_2022_clean %>%
@@ -97,7 +99,7 @@ trips_2022_clean %>%
      summarize(no_of_rides = n_distinct(ride_id))
 ```
 
-output
+Conversely, the analysis as per this piece of code above showed the number of rides by casual users on particular days of the week.
 
 |day_of_week|no_of_rides|
 |-----------|-----------|
@@ -109,9 +111,9 @@ output
 |Thursday|309297|
 |Wednesday|274339|
 
-2. average length of rides by member vs. casual
+2. Average length of rides by member vs. casual
 
-a. member
+a. Member
 
 ```
 trips_2022_clean %>%
@@ -120,14 +122,14 @@ trips_2022_clean %>%
      summarize(avg_ride_length = mean(ride_length))
 ```
 
-output
+The analysis step in the code above revealed average length of ride for each rideable type for members.
 
 |rideable_type|avg_ride_length|   
 |-------------|-----------|
 |electric_bike|0-0 0 0:11:27.831325|
 |classic_bike|0-0 0 0:13:54.705167|
 
-b. casual
+b. Casual
 
 ```
 trips_2022_clean %>%
@@ -136,7 +138,7 @@ trips_2022_clean %>%
       summarize(avg_ride_length = mean(ride_length))
 ```
 
-output - trips on docked bikes are much longer
+As per this analysis step, the average length of ride for each rideable type was identified for casual users. Outputs reveal that casual users' trips on docked bikes are much longer compared to other rideables and average ride lengths are longer than for members across all rideable types.
 
 |rideable_type|avg_ride_length|     
 |-------------|-----------|
@@ -144,9 +146,9 @@ output - trips on docked bikes are much longer
 |docked_bike|0-0 0 2:2:42.941888|
 |classic_bike|0-0 0 0:28:45.184446|
 
-3. rideable_type by member vs. casual
+3. Rideable type by member vs. casual
 
-a. member
+a. Member
 
 ```
 trips_2022_clean %>%
@@ -155,14 +157,14 @@ trips_2022_clean %>%
      summarise(no_of_rides = n_distinct(ride_id))
 ```
 
-output
+The code above was applied to show number of rides by rideable type for members.
 
 |rideable_type|no_of_rides|
 |-------------|-----------|
 |classic_bike|1709682|
 |electric_bike|1635735|
 
-b. casual
+b. Casual
 
 ```
 trips_2022_clean %>%
@@ -171,7 +173,7 @@ trips_2022_clean %>%
       summarise(no_of_rides = n_distinct(ride_id))
 ```
 
-output - insight is that casuals used docked bike, whereas members don't
+The code above was applied to show number of rides by rideable type for casual users. As per the outputs, the main insight is that casual users hire docked bike, whereas members do not.
 
 |rideable_type|no_of_rides|
 |-------------|-----------|
@@ -181,11 +183,11 @@ output - insight is that casuals used docked bike, whereas members don't
 
 <h1>Visualisations</h1>
 
-Certain insights better visible in graphical form, decided to show analyse differences in monthly distribution of rides between members and casual, and show them in a time series chart
+Some insights are better identified based on review of data displayed in a graphical form. For this analysis, I decided to break down members and casual users' rides per month and display the results in a time series chart.
 
-First a new data frame was created from monthly statistics on number of rides in members and casual
+As first step, a new data frame was created with monthly number of rides in members and casual users.
 
-a. members
+a. Members
 
 ```
 members_trips_monthly <- trips_2022_clean %>% 
@@ -209,28 +211,29 @@ casual_trips_monthly <- trips_2022_clean %>%
      summarise(no_of_rides = n_distinct(ride_id))
 ```
 
-Based on these data frames visualisations were developed using the ggplot2 package.
+Based on these data frames, visualisations were developed using the ggplot2 package.
 
-a. members
+a. Members
 
 ```
 ggplot(data = members_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + geom_col(fill="darkblue")+scale_y_continuous(labels = scales::comma_format(), breaks = seq(0, 600000, 100000)) + scale_x_continuous(breaks = seq(1,12,1))
 ```
 
-output
+The output of this code is visible below.
 ![image](https://github.com/kamil-michalski-1/Cyclistic-Bike-Share-Project/assets/147998053/7e467898-2884-4824-bb05-a5cd9b82371a)
 
 
-b. casual
+b. Casual
 
 ```
 ggplot(data = casual_trips_monthly, mapping = aes(x=month, y=no_of_rides)) + geom_col(fill="orange")+scale_y_continuous(labels = scales::comma_format(), breaks = seq(0, 600000, 100000)) + scale_x_continuous(breaks = seq(1,12,1))
 ```
 
-output
+The output of this code is visible below.
 ![image](https://github.com/kamil-michalski-1/Cyclistic-Bike-Share-Project/assets/147998053/bb677e29-4ae2-46ba-bdd0-c5066ddb599d)
 
 
 <h1>Conclusion</h1>
-Cover further areas to upskill onhandling very large datasets in R, e.g. through splitting them into more manageable chunks. Also, from the business perspective, it might be beneficial to filter as much data as possible and query subsets of the full dataset for better performance.
+The analysis steps documented above revealed focus areas for further development of my data analytics skills. The key area is how to handle very large datasets in R, e.g. through splitting them into more manageable chunks, applying meaningful filters, and querying subsets of the full dataset for better performance.
 
+Full business significance of the discovered insights and recomendations are covered in the project presentation.
