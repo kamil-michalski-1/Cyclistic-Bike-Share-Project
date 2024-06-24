@@ -38,7 +38,7 @@ Further, to validate the corectness of the connection, a listing of fields in th
 dbListFields(con, "cyclistic_2022_dataset_clean")
 ```
 
-As next step, a new table was created in Posit Cloud Studio based on connection with the cleaned dataset in Big Query Cloud.
+As next step, a new table was created in Posit Cloud Studio based on the connection with the cleaned dataset in Big Query Cloud.
 
 ```
 trips_2022_clean <- tbl(con,"cyclistic_2022_dataset_clean")
